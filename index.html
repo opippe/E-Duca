@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./styles.css'>
+    <script src='./script.js'></script>
+    <script src="https://kit.fontawesome.com/535f433bb6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>E-DUCA</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="user_info">
+            <i class="fa-solid fa-circle-user"></i> Olá, Usuário!
+        </div>
+        <div class="abas">
+            <button>Jogo</button>
+            <button>Missões</button>
+        </div>
+        <div class="rentabilidade">
+            <div class="rent">
+                <p>Rentabilidade</p>
+                <p>0%</p>
+            </div>
+            <div class="separador"></div>
+            <div class="fundos">
+                <p>Fundos</p>
+                <p id="valorFundosHome">R$4000</p>
+            </div>
+        </div>
+        <div class="jogar">
+            <div class="jogar_topo">
+                <p>Júnior</p>
+                <button onclick='abrirPergunta()'>JOGAR</button>
+            </div>
+            <p>Ganhe fundos ao ajudar os personagens a tomar as melhores decisões.</p>
+            <div class="barra_progresso">
+                <div class="barra_progresso_preench"></div>
+            </div>
+        </div>
+        <div class="ranking">
+            <h2>Classificação Geral</h2>
+            <div class="primeiro_ranking">
+                <div class="ranking_pontuacao">
+                    <p class="pontuac">10957</p>
+                    <p>Pontos</p>
+                </div>
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="nome_bandeira">
+                    <p>Fulano</p>
+                    <i class="fa-regular fa-flag"></i>
+                </div>
+                <div class="ranking_fundos">
+                    <p class="pontuac">R$6032</p>
+                    <p>Fundos</p>
+                </div>
+            </div>
+            <div class="segundo_ranking">
+                <div class="ranking_pontuacao">
+                    <p class="pontuac">10876</p>
+                    <p>Pontos</p>
+                </div>
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="nome_bandeira">
+                    <p>Beltrano</p>
+                    <i class="fa-regular fa-flag"></i>
+                </div>
+                <div class="ranking_fundos">
+                    <p class="pontuac">R$5628</p>
+                    <p>Fundos</p>
+                </div>
+            </div>
+            <div class="ver_ranking">
+                <p>Ver ranking</p><i class="fa-solid fa-chevron-right" style="color: #fafafa;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="pergunta_container" id="pergunta-container">
+        <div class="pergunta_utilit">
+            <i onclick="fecharPergunta()" class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="pergunta_topo">
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="nome_nivel">
+                <p class="valor">Júnior</p>
+                <p class="titulo">NÍVEL</p>
+            </div>
+            <div class="rentac">
+                <p class="valor">0%</p>
+                <p class="titulo">RENTABILIDADE</p>
+            </div>
+            <div class="pergunta_fundo">
+                <p class="valor" id="valorFundos"></p>
+                <p class="titulo">FUNDOS</p>
+            </div>
+        </div>
+        <div class="pergunta_contador">1 2 3 4</div>
+        <div class="pergunta_enunciado">
+            <p>Você recomenda isso?</p>
+            <h2 id="perguntaTitulo"></h2>
+            <p id="perguntaSubtitulo"></p>
+        </div>
+        <div class="pergunta_valor">
+            <div class="pergunta_frase" id="perguntaFrase"></div>
+            <div class="pergunta_divisor"></div>
+            <div class="pergunta_valor_preco"><h2 id="perguntaPreco"></h2></div>
+        </div>
+        <div class="respostas">
+            <button onclick="respostaNao()" class="nao">Não</button>
+            <button onclick="respostaSim()" class="sim">Sim</button>
+            <div class="contador" id="contador"></div>
+        </div>
+    </div>
+
+</body>
+</html>
