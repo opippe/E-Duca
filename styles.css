@@ -45,7 +45,7 @@ p {
     margin-bottom: 1rem;
 }
 
-.abas > button {
+.botao_jogo {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -56,8 +56,15 @@ p {
     color: #79a83d;
 }
 
-.abas > button:not(:first-child) {
+.botao_missoes {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 1rem;
+    background: none;
+    border: none;
     border-bottom: 5px solid #cecece;
+    color: #79a83d;
 }
 
 .rentabilidade {
@@ -261,6 +268,91 @@ p {
     margin-right: 10px;
 }
 
+/* TELA DE MISSÕES */
+#missoes-container {
+    display: none;
+}
+
+.missoes_container {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-height: 800px;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.clinicas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.clinicas > .text {
+    margin-top: 1.5rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #808080;
+}
+
+.square {
+    display: flex;
+    width: 90%;
+    max-height: 100px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transform: scale(.9);
+    transition: .4s;
+    box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 20%);
+}
+
+.square:hover {
+    transform: scale(1);
+}
+
+.square:hover .thumb-title {
+    background-color: #00000090;
+}
+
+.thumbnail {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.thumb-title {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000060;
+    letter-spacing: 3px;
+}
+
+.thumb-title span {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: .4s;
+}
+
+/* TELA DO JOGO DE PERGUNTAS */
 .pergunta_container {
     display: none;
     background: #242424;

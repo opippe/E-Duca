@@ -133,6 +133,24 @@ function fecharPergunta() {
     clearInterval(countDown)
 }
 
+function botaoJogo() {
+    document.getElementById("container").style.display = "flex";
+    document.getElementById("missoes-container").style.display = "none";
+    document.getElementById("botao-jogo").style.borderBottom = "5px solid #79a83d";
+    document.getElementById("botao-missoes").style.borderBottom = "5px solid #cecece";
+    document.getElementById("botao-jogo1").style.borderBottom = "5px solid #79a83d";
+    document.getElementById("botao-missoes1").style.borderBottom = "5px solid #cecece";
+}
+
+function botaoMissoes () {
+    document.getElementById("container").style.display = "none";
+    document.getElementById("missoes-container").style.display = "flex";
+    document.getElementById("botao-jogo").style.borderBottom = "5px solid #cecece";
+    document.getElementById("botao-missoes").style.borderBottom = "5px solid #79a83d";
+    document.getElementById("botao-jogo1").style.borderBottom = "5px solid #cecece";
+    document.getElementById("botao-missoes1").style.borderBottom = "5px solid #79a83d";
+}
+
 function respostaSim() {
     if (pergunta[perguntaAtual].resposta == "nao") {
         totalFundos = totalFundos - pergunta[perguntaAtual].intPrecoMenos

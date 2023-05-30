@@ -11,13 +11,14 @@
     <title>E-DUCA</title>
 </head>
 <body>
+    <!-- TELA PRINCIPAL -->
     <div class="container" id="container">
         <div class="user_info">
             <i class="fa-solid fa-circle-user"></i> Olá, Usuário!
         </div>
         <div class="abas">
-            <button>Jogo</button>
-            <button>Missões</button>
+            <button class="botao_jogo" id="botao-jogo" onclick="botaoJogo()">Jogo</button>
+            <button class="botao_missoes" id="botao-missoes" onclick="botaoMissoes()">Missões</button>
         </div>
         <div class="rentabilidade">
             <div class="rent">
@@ -77,6 +78,29 @@
             </div>
         </div>
     </div>
+
+    <!-- TELA DAS MISSÕES -->
+    <div class="missoes_container" id="missoes-container">
+        <div class="user_info">
+            <i class="fa-solid fa-circle-user"></i> Olá, Usuário!
+        </div>
+        <div class="abas">
+            <button class="botao_jogo" id="botao-jogo1" onclick="botaoJogo()">Jogo</button>
+            <button class="botao_missoes" id="botao-missoes1" onclick="botaoMissoes()">Missões</button>
+        </div>
+        <div class="clinicas">
+            <div class="square">
+                <img src="./imagens/orcamento.jpeg" class="thumbnail">
+                <div class="thumb-title">ORÇAMENTO</div>
+            </div>
+            <div class="square">
+                <img src="./imagens/metas.webp" class="thumbnail">
+                <div class="thumb-title">METAS</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELA DO JOGO DE PERGUNTAS -->
     <div class="pergunta_container" id="pergunta-container">
         <div class="pergunta_utilit">
             <i onclick="fecharPergunta()" class="fa-solid fa-xmark"></i>
